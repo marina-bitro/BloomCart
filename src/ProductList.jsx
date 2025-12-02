@@ -230,6 +230,7 @@ function ProductList({ onHomeClick }) {
         justifyContent: 'space-between',
         alignIems: 'center',
         fontSize: '20px',
+        textDecoration : 'none',
     }
     const styleObjUl = {
         display: 'flex',
@@ -289,7 +290,8 @@ function ProductList({ onHomeClick }) {
                         <a href="/" onClick={(e) => handleHomeClick(e)}>
                             <div>
                                 <h3 style={{ color: 'white', textDecoration: 'none' }}>Paradise Nursery</h3>
-                                <i style={{ color: 'white', textDecoration: 'none' }}>Where Green Meets Serenity</i>
+
+                                <i  style={{ color: 'white', textDecoration: 'none' }}>Where Green Meets Serenity</i>
                             </div>
                         </a>
                     </div>

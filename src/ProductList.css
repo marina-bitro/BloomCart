@@ -40,6 +40,8 @@
     display: flex;
     gap: 40px;
     align-items: center;
+    text-decoration: none;
+
   }
   
   .nav-links a {

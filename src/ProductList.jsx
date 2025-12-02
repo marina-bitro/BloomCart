@@ -230,6 +230,7 @@ function ProductList({ onHomeClick }) {
         justifyContent: 'space-between',
         alignIems: 'center',
         fontSize: '20px',
+        textDecoration : 'none',
     }
     const styleObjUl = {
         display: 'flex',

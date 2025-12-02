@@ -3,15 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: "Arial", sans-serif;
     background: #f5f5f5;
-  }
-  
-  /* ---------------- NAVBAR ---------------- */
-  .navbar {
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -19,133 +19,142 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  /* Left logo + text */
-  .luxury {
+}
+
+/* Left logo + text */
+.luxury {
     display: flex;
     align-items: center;
     gap: 15px;
     text-decoration: none;
-  }
-  
-  .luxury img {
+    cursor: pointer;
+}
+
+.luxury img {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-  }
-  
-  /* Center links */
-  .nav-links {
+}
+
+.brand-text h3, .brand-text i {
+    margin: 0;
+}
+
+/* Center links */
+.nav-links {
     display: flex;
     gap: 40px;
     align-items: center;
-  }
-  
-  .nav-links a {
+}
+
+.nav-links a {
     font-size: 20px;
     color: white;
     font-weight: bold;
-  }
-  
-  .nav-links a:hover {
+}
+
+.nav-links a:hover {
     opacity: 0.8;
-  }
+}
 
 .no-underline {
     text-decoration: none;
 }
-  
-  /* Cart icon container */
-  .cart {
+
+/* Cart icon container */
+.cart {
     position: relative;
-  }
-  
-  /* Cart count bubble */
-  .cart_quantity_count {
+}
+
+/* Cart count bubble */
+.cart-badge {
     position: absolute;
+    top: -8px;
     right: -8px;
-    top: -5px;
-    background: white;
-    color: #4CAF50;
-    font-size: 17px;
-    padding: 2px 6px;
+    background: red;
+    color: white;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-  }
-  
-  
-  /* ---------------- PRODUCT GRID ---------------- */
-  .product-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* ---------------- PRODUCT GRID ---------------- */
+.product-grid {
     width: 100%;
     padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-  }
-  
-  /* Category Title */
-  .category-name {
+}
+
+/* Category Title */
+.category-name {
     text-align: center;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
-  
-  /* Grid for cards */
-  .product-list {
+}
+
+/* Grid for cards */
+.product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     width: 100%;
-  }
-  
-  
-  /* ---------------- PRODUCT CARD ---------------- */
-  .plants-card {
+}
+
+/* ---------------- PRODUCT CARD ---------------- */
+.plants-card {
     background: white;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: .3s ease;
-  }
-  
-  .plants-card:hover {
+    position: relative;
+}
+
+.plants-card:hover {
     transform: translateY(-6px);
-  }
-  
-  /* Images */
-  .plants-image {
+}
+
+/* Images */
+.plants-image {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
-  }
-  
-  /* Title */
-  .plants-title h1 {
+}
+
+/* Title */
+.plants-title h3 {
     font-size: 22px;
     margin: 15px 0 5px;
     color: #333;
-  }
-  
-  /* Description */
-  .plants-description {
+}
+
+/* Description */
+.plants-description {
     font-size: 16px;
     color: #555;
     margin: 10px 0 15px;
-  }
-  
-  /* Price */
-  .plants-cost {
+}
+
+/* Price */
+.plants-cost {
     font-size: 20px;
     font-weight: bold;
     color: #e54747;
     margin-bottom: 15px;
-  }
-  
-  /* Button */
-  .plants-button {
+}
+
+/* Button */
+.plants-button {
     padding: 12px 25px;
     background: #4CAF50;
     color: white;
@@ -154,44 +163,57 @@
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s ease;
-  }
-  
-  .plants-button:hover {
+}
+
+.plants-button:hover {
     background: #37903f;
-  }
-  
-  .plants-button.added-to-cart {
+}
+
+.plants-button.added-to-cart,
+.plants-button[disabled] {
     background: gray;
-  }
-  
-  
-  /* ---------------- MOBILE FRIENDLY ---------------- */
-  
-  /* Tablet */
-  @media (max-width: 900px) {
+    cursor: not-allowed;
+}
+
+/* Sale badge */
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 4px 6px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* ---------------- MOBILE FRIENDLY ---------------- */
+
+/* Tablet */
+@media (max-width: 900px) {
     .navbar {
-      flex-direction: column;
-      gap: 20px;
+        flex-direction: column;
+        gap: 20px;
     }
     .nav-links {
-      gap: 25px;
+        gap: 25px;
     }
-  }
-  
-  /* Mobile */
-  @media (max-width: 600px) {
+}
+
+/* Mobile */
+@media (max-width: 600px) {
     .navbar {
-      text-align: center;
+        text-align: center;
     }
-  
+
     .luxury img {
-      height: 50px;
-      width: 50px;
+        height: 50px;
+        width: 50px;
     }
-  
+
     .nav-links {
-      flex-direction: column;
-      gap: 15px;
+        flex-direction: column;
+        gap: 15px;
     }
-  }
-  
+}

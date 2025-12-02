@@ -1,6 +1,5 @@
 /* RESET */
 * {
-    text-decoration: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,12 +40,9 @@
     display: flex;
     gap: 40px;
     align-items: center;
-    text-decoration: none;
-
   }
   
   .nav-links a {
-    text-decoration: none;
     font-size: 20px;
     color: white;
     font-weight: bold;
@@ -55,6 +51,10 @@
   .nav-links a:hover {
     opacity: 0.8;
   }
+
+.no-underline {
+    text-decoration: none;
+}
   
   /* Cart icon container */
   .cart {

@@ -86,7 +86,7 @@
 /* ProductList.css */
 
 .product-list-container {
-  position: absolute;
+  /* position: absolute; */
   overflow-x: hidden;
   top: 140vh;
   /* Initially off-screen */
